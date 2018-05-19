@@ -1,0 +1,71 @@
+.ss-container {
+    position: relative;
+}
+.ss-toggle-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 10%;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    border: solid 3px #333;
+    background: none;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.25);
+}
+.ss-share-btn {
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    border-radius: 10%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    overflow: hidden;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
+    border: solid 3px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+.ss-share-btn .ss-cover {
+    width: 44px;
+    height: 44px;
+    color: #FFF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ss-twitter .ss-cover {
+    background-color: #1da1f2;
+    border-color: #1a8fd8;
+}
+.ss-facebook .ss-cover {
+    background-color: #3B5998;
+    border-color: rgb(54, 81, 139);
+}
+.ss-google .ss-cover {
+    background-color: #d34836;
+    border-color: #bd4130;
+}
+.ss-container.ss-open .ss-share-btn {
+    pointer-events: auto;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity .2s ease-out;
+}
+.ss-container.ss-open .ss-share-btn:hover {
+    opacity: 1;
+}
+.ss-bar {
+    width: 26px;
+    height: 4px;
+    background-color: #333;
+    border-radius: 9px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}

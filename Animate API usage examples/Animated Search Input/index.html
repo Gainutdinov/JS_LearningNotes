@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Input Component</title>
+    <link rel="stylesheet" href="search-input.css">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .frame {
+            width: 400px;
+            height: 50px;
+            padding: 20px 45px 20px 20px;
+            background-color: #F1F1F1;
+            border-radius: 30px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/document-register-element/1.5.0/document-register-element.js"></script>
+
+    <script src="search-input.js"></script>
+</head>
+<body>
+    <div class="frame">
+        <search-input></search-input>
+    </div>
+    <script>
+        const $si = document.querySelector("search-input");
+        $si.addEventListener("term-changed", e => {
+            console.log("VALUE CHANGED:", e.detail);
+        });
+        $si.addEventListener("term-submitted", e => {
+            alert("Term submitted: " + e.target.value)
+        });
+    </script>
+</body>
+</html>
